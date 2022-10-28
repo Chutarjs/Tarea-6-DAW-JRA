@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea Javascript</title>
+</head>
+<body>
+    <h1>Ejemplos Javascript:</h1>
+
+    <!-- Ejemplo de If -->
+    <h3>Ejemplo de If</h3>
+    <p id="ejemploIf">  </p>
+    <script>
+        if (new Date().getHours() < 18) {
+            document.getElementById("ejemploIf").innerHTML = "Buenos Dias!";
+        } else {
+            document.getElementById("ejemploIf").innerHTML = "Buenas Noches!";
+        }
+    </script>
+
+    <!-- Ejemplo de switch -->
+    <h3> <br> Ejemplo de Switch</h3>
+    <p id="EjemploSwitch"></p>
+
+    <script>
+    let day;
+    switch (new Date().getDay()) {
+    case 0:
+        day = "Domingo";
+        break;
+      case 1:
+        day = "Lunes";
+        break;
+      case 2:
+        day = "Martes";
+        break;
+      case 3:
+        day = "Miercoles";
+        break;
+      case 4:
+        day = "Jueves";
+        break;
+      case 5:
+        day = "Viernes";
+        break;
+      case  6:
+        day = "Sabado";
+    }
+    document.getElementById("EjemploSwitch").innerHTML = "Hoy es " + day;
+    </script>
+
+    <!-- Ejemplo de Try Catch Throw -->
+    <h3><br>Ejemplo de Try Catch Throw</h3>
+    <p id="EjemploTryCatch"></p>
+
+    <script>
+        try {
+            alertt("Bienvenido!");
+        }
+        catch(err) {
+            document.getElementById("EjemploTryCatch").innerHTML = err.message;
+        }
+        throw "Error";
+    </script>
+
+    <!-- Ejemplo de Objetos Error -->
+    <h3><br>Ejemplo de Objetos Error</h3>
+    <p id="EjemploError"></p>
+
+    <script>
+        try {
+            alertt("Bienvenido!");
+        }
+        catch(err) {
+            document.getElementById("EjemploError").innerHTML = " Esto es el Error Message: " + err.message + " Esto es el Error Name: " + err.name;
+        }
+        throw "Error";
+    </script>
+
+    <!-- Ejemplo de for -->
+    <h3>Ejemplo del for</h3>
+    <p id="EjemploFor"></p>
+
+    <script>
+    let text = "";
+
+    for (let i = 0; i < 5; i++) {
+      text += "El numero es: " + i + "<br>";
+    }
+
+      document.getElementById("EjemploFor").innerHTML = text;
+    </script>
+
+    <!-- Ejemplo de while -->
+    <h3>Ejemplo del While</h3>
+    <p id="EjemploWhile"></p>
+
+    <script>
+    let texto = "";
+    let i = 0;
+    while (i <= 5) {
+      texto += "El numero es: " + i + "<br>";
+      i++;
+    }
+    document.getElementById("EjemploWhile").innerHTML = texto;
+    </script>
+
+    <!-- Ejemplo de do while -->
+    <h3>Ejemplo del Do-While</h3>
+    <p id="EjemploDoWhile"></p>
+
+    <script>
+      let ej = "";
+      let ii = 0
+      do{
+        ej += "El numero es: " + ii + "<br>";
+        ii++;
+      }while (ii <= 5);
+    document.getElementById("EjemploDoWhile").innerHTML = ej;
+    </script>
+
+    <!-- Ejemplo de funciones (definir y llamar) -->
+    <h3>Ejemplo de funciones</h3>
+    <p>Esta Funcion devuelve la suma de dos numeros, en este caso 4 y 3</p>
+    <p id="Funcion">  </p>
+    <script>
+      var x = myFunction(4, 3);
+      document.getElementById("Funcion").innerHTML = x;
+      
+      function myFunction(a, b) {
+        return a + b;
+      }
+      </script>
+
+    <!-- Ejemplo de Number -->
+      <h3><br>Ejemplo de Number</h3>
+      <p>Los numeros pueden ser escritos con o sin decimales:</p>
+
+      <p id="EjemploNumber"></p>
+
+      <script>
+        let z = 3.14;
+        let a = 3;
+        document.getElementById("EjemploNumber").innerHTML = z + "<br>" + a;
+      </script>
+    <!-- Ejemplo de Math -->
+    <h3><br>Ejemplos de Math</h3>
+    <p>Math.round(4.5) redondea el numero:</p>
+
+    <p id="Math1"></p>
+    
+    <script>
+    document.getElementById("Math1").innerHTML = Math.round(4.5);
+    </script>
+
+    <p><br>Math.ceil(6.1) redondea hacia arriba:</p>
+
+    <p id="Math2"></p>
+
+    <script>
+    document.getElementById("Math2").innerHTML = Math.ceil(6.1);
+    </script>
+
+    <p><br>Math.floor(4.7) redondea hacia abajo:</p>
+
+    <p id="Math3"></p>
+
+    <script>
+    document.getElementById("Math3").innerHTML = Math.floor(4.7);
+    </script>
+
+    <p><br>Math.trunc(8.7) devuelve la parte entera:</p>
+
+    <p id="Trunc"></p>
+
+    <script>
+    document.getElementById("Trunc").innerHTML = Math.trunc(8.7);
+    </script>
+
+    <p><br>Math.sign(-4) duevuelve si es positivo o negativo:</p>
+
+    <p id="Sign"></p>
+
+    <script>
+      document.getElementById("Sign").innerHTML = Math.sign(-4);
+    </script>
+
+    <p><br>Math.pow(8,2) eleva el 8 a la 2:</p>
+
+    <p id="Pow"></p>
+
+    <script>
+    document.getElementById("Pow").innerHTML = Math.pow(8,2);
+    </script>
+
+    <p><br>Math.sqrt(64) devuelve la raiz:</p>
+
+    <p id="Sqrt"></p>
+
+    <script>
+    document.getElementById("Sqrt").innerHTML = Math.sqrt(64);
+    </script>
+
+    <p><br>Math.abs(-4.7) devuelve el valor absoluto:</p>
+
+    <p id="Abs"></p>
+
+    <script>
+    document.getElementById("Abs").innerHTML = Math.abs(-4.7);
+    </script>
+
+    <p><br>Math.min(0, 15, 10, 5) devuelve el minimo de un rango:</p>
+
+    <p id="Min"></p>
+
+    <script>
+    document.getElementById("Min").innerHTML =
+    Math.min(0, 15, 10, 5);
+    </script>
+
+    <p><br>Math.max(0, 15, 10, 5) devuelve el maximo de un rango:</p>
+
+    <p id="Max"></p>
+
+    <script>
+    document.getElementById("Max").innerHTML =
+    Math.max(0, 15, 10, 5);
+    </script>
+
+    <p><br>Math.random()*(5-1)+1 devuelve un numero random entre 5 y 1:</p>
+
+    <p id="Random"></p>
+
+    <script>
+    document.getElementById("Random").innerHTML = Math.random() * (5 - 1) + 1;
+    </script>
+
+    <!-- Ejemplo de Date -->
+    <h3><br>Ejemplo Fechas</h3>
+    <p>new Date() sin argumentos:</p>
+    <p id="Date1"></p>
+
+    <script>
+    const d = new Date();
+    document.getElementById("Date1").innerHTML = d;
+    </script>
+
+    <p><br>new Date("2022-03-25") con argumentos:</p>
+    <p id="Date2"></p>
+
+    <script>
+    const dd = new Date("2022-03-25");
+    document.getElementById("Date2").innerHTML = dd;
+    </script>
+
+    <p><br>new Date(year,month,day,hours,minutes,seconds,ms) con formato:</p>
+    <p id="Date3"></p>
+
+    <script>
+    const f = new Date(2022,07,28,11,12,13,14);
+    document.getElementById("Date3").innerHTML = f;
+    </script>   
+
+    <!-- Formato de texto(Cadenas literales, string) -->
+    <h3><br>Ejemplo String, Objetos y Cadenas Literales</h3>
+    
+    <p id="Texto"></p>
+
+    <script>
+    let q = "Esto es un String";
+
+    let w = new String("Esto es un Objeto");
+
+    document.getElementById("Texto").innerHTML =
+    typeof q + ": " + q +  "<br>" + typeof w + ": " + w + "<br>Cadena Literal: Esto es una cadena literal";
+    </script>
+
+    <!-- Colecciones indexadas(arreglos, arreglos tipados) -->
+    <h3><br>Ejemplo Arreglos</h3>
+    <p>Esto es un arreglo de carros (con tamaño fijo):</p>
+    <p id="Array1"></p>
+
+    <script>
+    const carros = new Array(3);
+    carros[0] = "Lamborghini";
+    carros[1] = "Maclaren";
+    carros[2] = "Chevrolet";
+    document.getElementById("Array1").innerHTML = carros;
+    </script>
+
+    <p><br>Esto es un arreglo tipado de carros: </p>
+    <p id="Array2"></p>
+
+    <script>
+    const cars = ["Ferrari", "Ford", "BMW"];
+    document.getElementById("Array2").innerHTML = cars;
+    </script>
+
+    <!-- DOM (por Id, Nombre de Etiqueta, Clase, selectores CSS, obj html) -->
+    <h3><br>Ejemplos DOM</h3>
+    <p>Por ID:</p>
+    <p id="demo"></p>
+
+    <script>
+    document.getElementById("demo").innerHTML = "Hello World!";
+    </script>
+
+    <p><br>Por Nombre de Etiqueta:</p>
+    <p id="tag"></p>
+    
+    <script>
+    const element = document.getElementsByTagName("p");
+    
+    document.getElementById("tag").innerHTML = 'El texto en el index 0 es: ' + element[0].innerHTML;
+    
+    </script>
+
+    <p><br>Por Nombre de Clase:</p>
+    <p id = "iden" class = "clase">Hola Costa Rica!</p>
+
+    <script>
+    const c = document.getElementsByClassName("clase");
+    document.getElementById("iden").innerHTML = "El texto en el index 0 es: " + c[0].innerHTML;
+    </script>
+
+    <p><br>Por selectores css:</p>
+    <p class="CSS">Hello World!</p>
+    <p id="CSS">Hola</p>
+
+    <script>
+    const xp = document.querySelectorAll("p.CSS");
+    document.getElementById("CSS").innerHTML = 
+    'El index 0 de la clase="CSS" es: ' + xp[0].innerHTML;
+    </script>
+
+    <p><br>Por Objetos HTML:</p>
+    <form id="frm1">
+      Nombre: <input type="text" name="fname" value="Juan"><br><br>
+    </form> 
+
+    <p>Este es el valor que esta en el form:</p>
+
+    <p id="frame"></p>
+
+    <script>
+    const ñ = document.forms["frm1"];
+    let textoo = "";
+    for (let g = 0; g < ñ.length; g++) {
+      textoo += ñ.elements[g].value + "<br>";
+    }
+    document.getElementById("frame").innerHTML = textoo;
+    </script>
+</body>
+</html>
